@@ -1,19 +1,33 @@
 @charset "utf-8";
 @import "normalize";
 @import "bourbon";
+@import "grid_settings.scss";
 @import "neat";
 
 body {
   color: #333;
   font-size: 1em;
-  font-family: "adobe-garamond-pro"
+  font-family: "adobe-garamond-pro";
+  margin: 0;
+  padding: 0;
+}
+main {
+  padding: 0 1rem;
+}
+article{
+  @include outer-container();
+  section {
+    @include span-columns(12);
+  }
 }
 
 h1 {
+  border: 1px solid aqua;
   font-size: 5rem;
   font-style: normal;
   font-weight: 700;
   line-height: 6rem;
+  margin: 0;
   text-align: center;
 }
 p {
